@@ -19,14 +19,14 @@ export class AppComponent {
      constructor(private http: HttpClient) { }
   
      Generate() {
-          this.http.get<mbi_response>("http://localhost:3000/generate")
+          this.http.get<mbi_response>("generate")
                .subscribe((response : mbi_response) => {
                     this.log = response.mbi + "<br />" + this.log;
                });
      }
 
      Validate() {
-          this.http.post<mbi_response>("http://localhost:3000/validate", { mbi: this.mbi_to_validate })
+          this.http.post<mbi_response>("validate", { mbi: this.mbi_to_validate })
           .subscribe((response) => {
                this.validate_response = JSON.stringify(response);
           });
