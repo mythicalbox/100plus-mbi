@@ -75,7 +75,7 @@ const ivalidate_post = Type.Object({
 type ivalidate_post_type = Static<typeof ivalidate_post>;
 fastify.post<{ Body : ivalidate_post_type }>('/validate', async (request, reply) => {
      let mbi : string = request.body.mbi;
-     console.log(request.body);
+     // console.log(request.body);
      if (mbi == null || mbi == "")
           return { valid: false, reason: "No input." };
 

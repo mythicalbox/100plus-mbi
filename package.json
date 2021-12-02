@@ -1,0 +1,23 @@
+{
+  "name": "100plus-mbi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "dependencies": {
+    "@sinclair/typebox": "^0.23.0",
+    "fastify": "^3.24.1",
+    "fastify-cors": "^6.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/app.js",
+    "postinstall": "tsc",
+    "deploy": "git add . && git commit -m Heroku && git push heroku master"
+  },
+  "engines": { "node": "16.13.1" },
+  "author": "Mitchel Constantin",
+  "license": "MIT"
+}
