@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const path = require('path')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -9,16 +10,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({
      extended: true
  }));
- app.use(bodyParser.json());
-
-app.get('/', (req, res) => {
-     // reply.type('application/json').code(200)
-
-     res.send({
-          // mbi: generateMBI(),
-          // valid_mbi: valid_mbi
-     });
-});
+app.use(bodyParser.json());
 
 
 function getMBIFormat() {
@@ -90,6 +82,8 @@ app.post('/validate', (req, res) => {
      res.send({ valid: true });
 });
 
+
+app.use(express.static(path.join(__dirname, 'spa/dist/spa')));
 app.listen(PORT, () => {
      console.log("Server is now listening on port " + PORT);
 })
