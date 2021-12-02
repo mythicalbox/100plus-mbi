@@ -14,7 +14,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node app.ts",
-//     "postinstall": "tsc",
     "deploy": "git add . && git commit -m Heroku && git push heroku master"
   },
   "engines": {
