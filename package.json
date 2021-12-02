@@ -4,11 +4,9 @@
   "description": "",
   "main": "app.ts",
   "dependencies": {
-    "@sinclair/typebox": "^0.23.0",
-    "fastify": "^3.24.1",
-    "fastify-cors": "^6.0.2",
-    "ts-node": "^10.4.0",
-    "typescript": "^4.5.2"
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@types/node": "^16.11.11"
