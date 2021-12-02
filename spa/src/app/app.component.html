@@ -1,0 +1,17 @@
+<html>
+     <body>
+          <br />
+          <br />
+          <br />
+          <br />
+          MBI: <input type="text" [(ngModel)]="mbi_to_validate"> <button (click)="Validate()">Validate</button><br />
+          <br />
+          {{ validate_response }}
+          <br />
+          <br />
+          <br />
+          <button (click)="Generate()">Generate MBI</button><br />
+          <br />
+          <div [innerHTML]="log"></div>
+     </body>
+</html>
