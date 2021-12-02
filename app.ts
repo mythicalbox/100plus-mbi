@@ -6,6 +6,8 @@ const fastify = Fastify({
      logger: true
 });
 
+const PORT = process.env.PORT || 5000;
+
 fastify.register(Fastify_cors, {});
 
 fastify.get('/', async (request, reply) => {
@@ -17,7 +19,7 @@ fastify.get('/', async (request, reply) => {
      }
 });
 
-fastify.listen(3000, (err, address) => {
+fastify.listen(PORT, (err, address) => {
      if (err) throw err
      // Server is now listening on ${address}
 })
